@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
+{% extends 'base.html' %}
+{% block content %}
 <head>
     <meta charset="UTF-8">
     <title>mysite</title>
 </head>
+
 <body>
     <h1>mysite</h1>
     {% if content_list %}
@@ -16,4 +19,5 @@
         <p>content 가 없습니다.</p>
     {% endif %}
 </body>
+{% endblock %}
 </html>
