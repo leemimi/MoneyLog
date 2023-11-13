@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+class MyAccount(models.Model):
+    moneyIn = models.IntegerField()
+    moneyOut = models.IntegerField()
+

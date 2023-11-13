@@ -1,5 +1,7 @@
-from django.http  import HttpResponse
-
+from django.shortcuts import render
+from .models import MyAccount
 def index(request):
-    return HttpResponse("Hello world")
+    content_list = MyAccount.objects.all()
+    context = {'content_list': content_list}
+    return render(request, 'mysite/content_list.html', context)
 
